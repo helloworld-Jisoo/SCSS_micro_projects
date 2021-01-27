@@ -1,0 +1,28 @@
+@import "buttons";
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bodoni Moda", serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 140px;
+  background-color: white;
+  height: 70px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  button {
+    @extend %button;
+  }
+}
