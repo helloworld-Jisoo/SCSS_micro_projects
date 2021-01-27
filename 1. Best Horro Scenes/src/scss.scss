@@ -1,0 +1,122 @@
+@import "reset";
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-color: $white;
+  display: flex;
+}
+
+header {
+  color: $red;
+  width: 40%;
+  height: 100%;
+  padding: 10vh 0 72px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    width: 50%;
+    letter-spacing: 5px;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    width: 80%;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 30px;
+    width: 80%;
+    font-family: "Lato";
+    line-height: 0.8;
+  }
+  nav {
+    width: 90%;
+    ul {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    li {
+      cursor: pointer;
+      font-size: 0.7rem;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+      font-weight: 600;
+      color: black;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+main {
+  background-color: $red;
+  .movie {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+
+    .movie-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 50%;
+        letter-spacing: 2px;
+      }
+    }
+    img {
+      width: 100%;
+      margin: 10px 0px;
+      box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    .movie-likes {
+      display: flex;
+      justify-content: flex-end;
+      p {
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
+      .thums {
+        display: flex;
+        justify-content: center;
+        i {
+          font-size: 1.5rem;
+          margin-right: 10px;
+        }
+        .thums-up,
+        .thums-down {
+          display: flex;
+          flex-direction: column;
+          i {
+            margin-bottom: 5px;
+          }
+          span {
+            font-size: small;
+          }
+        }
+      }
+    }
+  }
+}
