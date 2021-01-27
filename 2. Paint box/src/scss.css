@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&family=Montserrat&display=swap");
+header nav ul li:hover {
+  font-family: "Montserrat";
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,14 +22,55 @@ header {
   padding: 0px 140px;
   background-color: white;
   height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
 }
 
 header nav {
+  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav ul li {
+  cursor: pointer;
+  margin-right: 12px;
+  font-size: 20px;
+  color: black;
+  opacity: 0.5;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
+header nav ul li:hover {
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+header nav ul li:hover:first-child li {
+  margin-right: 60px;
 }
 /*# sourceMappingURL=scss.css.map */
