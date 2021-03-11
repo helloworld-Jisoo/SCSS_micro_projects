@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
 body {
   background-color: #dde1d4;
   padding: 15px;
@@ -8,59 +9,54 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 110px 45% 35%;
+  gap: 15px;
+  grid-template-areas:
+    "header header header"
+    "bad bad bad-next"
+    "religion religion religion";
 }
-p {
-  font-size: 24px;
+
+header {
+  background: black;
+  grid-area: header;
+  color: #dde1d4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
 }
-h1 {
-  font-size: 1100%;
-  font-weight: bold;
+
+.bad {
+  grid-area: bad;
+  display: flex;
+  align-items: flex-end;
 }
-span {
+
+.bad-next {
+  grid-area: bad-next;
+}
+
+div {
+  background-color: #f14112;
+}
+
+.religion {
+  grid-area: religion;
+}
+
+h2 {
+  font-size: 200px;
+  font-weight: 600;
+}
+
+.religion div {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
   font-size: 32px;
   color: #dde1d4;
-  font-weight: bold;
-  margin: 100px 10px;
-}
-.father {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(5, 200px);
-}
-
-.header {
-  background-color: black;
-  color: white;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
-}
-
-.header_child_ebd {
-  padding-left: 100px;
-}
-
-.middle {
-  background-color: #f14011;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  display: flex;
-  align-items: flex-end;
-}
-.middle2 {
-  background-color: #f14011;
-  grid-row-start: 2;
-  grid-row-end: 4;
-}
-.footer {
-  background-color: #f14011;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 6;
+  margin-top: 20px;
 }
