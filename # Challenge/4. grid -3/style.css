@@ -5,76 +5,45 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-template-rows: 8vw;
+  grid-auto-rows: 46vh;
 }
 
 header {
-  background: white;
-  text-align: center;
-  margin: 50px;
-  font-size: 300%;
-}
-
-main {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(autofit, 2, 1fr);
-  grid-auto-rows: minmax(min-content, 1fr);
-  grid-auto-columns: minmax(min-content, 1fr);
-}
-div {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
+  align-items: center;
+  font-size: 5vw;
 }
 
-div:first-child {
-  background: #bfbda7;
-}
-
-div:nth-child(2) {
-  background-color: black;
-  color: white;
-}
-
-div:nth-child(3) {
+article {
   background-color: #fe4714;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px 10px 30px;
+  text-align: center;
 }
 
-div:nth-child(4) {
-  background-color: black;
-  color: white;
-}
-
-div:nth-child(5) {
-  background-color: #847e96;
-}
-
-div:nth-child(6) {
-  background-color: #d0ff71;
-}
-
-div:nth-child(7) {
-  background-color: #993433;
-}
-div:nth-child(8) {
-  background-color: #3aa9fa;
-}
-div:nth-child(9) {
-  background-color: black;
-  color: white;
-}
-div:nth-child(10) {
+article:nth-child(2n) {
   background-color: #41907a;
 }
-div:nth-child(11) {
-  background-color: black;
-  color: white;
+
+article h3 {
+  font-size: 22px;
 }
 
-div:nth-child(12) {
-  background-color: #e3c4e5;
+.cover {
+  background-image: url("https://images.unsplash.com/photo-1465021696408-57e53e164d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+}
+
+.cover:nth-child(odd) {
+  background-image: url("https://images.unsplash.com/photo-1478071735433-5d8f19ad0fca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 }
